@@ -23,6 +23,13 @@ let initWebroutes = (app) => {
 
   router.get("/api/allcode", userController.getAllCode);
   router.get("/api/top-doctor-home", docterController.getTopDoctorHome);
+  router.get("/api/get-all-doctors", docterController.getAllDoctors);
+  router.post("/api/save-infor-doctors", docterController.postInforDoctor);
+  router.get(
+    "/api/get-detail-doctor-by-id",
+    docterController.getDetailDoctorById
+  );
+
   return app.use("/", router);
 };
 
