@@ -30,6 +30,10 @@ let initWebroutes = (app) => {
     docterController.getDetailDoctorById
   );
   router.post("/api/bulk-create-schedule", docterController.bulkCreateSchedule);
+  router.get(
+    "/api/get-schedule-doctor-by-date",
+    docterController.getScheduleByDate
+  );
 
   return app.use("/", router);
 };
